@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Trading Alerts | SMS Notifications</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #202d40;
+  margin: 0;
+  padding: 35px 16px;
+}
+.container {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 3px 18px #dce3ec;
+}
+h1 { color: #173d75; }
+label { display: block; margin: 18px 0 8px; }
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #b8c5d5;
+  border-radius: 6px;
+}
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+.consent input { margin-top: 4px; }
+button {
+  padding: 12px 22px;
+  background: #8897aa;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+}
+a { color: #155db5; }
+.note { color: #53647c; font-size: 14px; line-height: 1.6; }
+footer {
+  margin-top: 25px;
+  border-top: 1px solid #ddd;
+  padding-top: 18px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<main class="container">
+  <h1>Claude Trading Alerts</h1>
+  <p>Personal stock and options research notifications delivered by SMS.</p>
+
+  <h2>About the Service</h2>
+  <p>
+    Claude Trading Alerts provides automated market research
+    notifications, including significant stock and options price
+    movements, market observations, and system updates.
+  </p>
+  <p>
+    Messages are informational only. Trading decisions are made
+    manually. This service does not execute trades.
+  </p>
+
+  <h2>SMS Notification Enrollment</h2>
+  <p class="note">
+    Enrollment is not yet active. This page is being configured
+    to record consent before any subscriptions are accepted.
+  </p>
+
+  <form>
+    <label for="phone">Mobile phone number</label>
+    <input id="phone" name="phone" type="tel"
+           placeholder="+1XXXXXXXXXX"
+           autocomplete="tel" disabled>
+
+    <div class="consent">
+      <input type="checkbox" id="consent" disabled>
+      <label for="consent" style="margin:0">
+        I agree to receive automated SMS messages from
+        Claude Trading Alerts about market research,
+        options observations, and system notifications
+        at the mobile number provided.
+        Message frequency varies. Message and data rates
+        may apply. Consent is not a condition of purchase.
+        Reply STOP to opt out or HELP for assistance.
+      </label>
+    </div>
+
+    <button type="button" disabled>Subscribe — Coming Soon</button>
+  </form>
+
+  <h2>Message Information</h2>
+  <p class="note">
+    Program: Claude Trading Alerts<br>
+    Message frequency: Variable, based on market activity.<br>
+    Message and data rates may apply.<br>
+    Opt out: Reply STOP.<br>
+    Assistance: Reply HELP.
+  </p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    &nbsp; | &nbsp;
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <p class="note">
+      Informational research service. No automatic trade execution.
+    </p>
+  </footer>
+</main>
+</body>
+</html>
