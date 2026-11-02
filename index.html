@@ -74,31 +74,52 @@ footer {
 
   <h2>SMS Notification Enrollment</h2>
   <p class="note">
-    Enrollment is not yet active. This page is being configured
-    to record consent before any subscriptions are accepted.
+    Enter your mobile number and check the consent box to request enrollment in Claude Trading Alerts. Submission records your request but does not activate SMS notifications until confirmed by the service operator.
   </p>
 
-  <form>
-    <label for="phone">Mobile phone number</label>
-    <input id="phone" name="phone" type="tel"
-           placeholder="+1XXXXXXXXXX"
-           autocomplete="tel" disabled>
+ 
+<form action="https://formspree.io/f/mwllwwbk" method="POST">
+  <label for="phone">Mobile phone number</label>
+  <input
+    id="phone"
+    name="phone"
+    type="tel"
+    placeholder="+1XXXXXXXXXX"
+    autocomplete="tel"
+    pattern="\+1[0-9]{10}"
+    required
+  >
 
-    <div class="consent">
-      <input type="checkbox" id="consent" disabled>
-      <label for="consent" style="margin:0">
-        I agree to receive automated SMS messages from
-        Claude Trading Alerts about market research,
-        options observations, and system notifications
-        at the mobile number provided.
-        Message frequency varies. Message and data rates
-        may apply. Consent is not a condition of purchase.
-        Reply STOP to opt out or HELP for assistance.
-      </label>
-    </div>
+  <div class="consent">
+    <input
+      type="checkbox"
+      id="consent"
+      name="sms_consent"
+      value="I explicitly agree to receive SMS alerts"
+      required
+    >
+    <label for="consent" style="margin:0">
+      I agree to receive automated SMS messages from
+      Claude Trading Alerts about market research,
+      options observations, and system notifications
+      at the mobile number provided.
 
-    <button type="button" disabled>Subscribe — Coming Soon</button>
-  </form>
+      Message frequency varies. Message and data rates
+      may apply. Consent is not a condition of purchase.
+      Reply STOP to opt out or HELP for assistance.
+
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </label>
+  </div>
+
+  <input type="hidden" name="program"
+         value="Claude Trading Alerts">
+
+  <button type="submit" style="background:#173d75">
+    Subscribe to SMS Alerts
+  </button>
+</form>
 
   <h2>Message Information</h2>
   <p class="note">
